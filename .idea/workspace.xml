@@ -1,7 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="16ec4e21-dfb0-4015-9a32-baa5884eecf1" name="Default Changelist" comment="" />
+    <list default="true" id="16ec4e21-dfb0-4015-9a32-baa5884eecf1" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/resourcedAllocation/NetworkNode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resourcedAllocation/TempCode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/untitled/kolokwium/asd.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/untitled/kolokwium/klientTCP.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/untitled/kolokwium/serwerUDP.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/untitled/resourcedAllocation/Client.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/untitled/resourcedAllocation/DateSerwer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/untitled/resourcedAllocation/DateSerwer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resourcedAllocation/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/resourcedAllocation/NetworkClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resourcedAllocation/DateSerwer.java" beforeDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -15,34 +26,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/kolokwium/klientTCP.java">
+        <entry file="file://$PROJECT_DIR$/src/resourcedAllocation/NetworkClient.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="12" column="28" selection-start-line="12" selection-start-column="28" selection-end-line="12" selection-end-column="28" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/kolokwium/serwerUDP.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="527">
-              <caret line="38" column="30" selection-start-line="38" selection-start-column="30" selection-end-line="38" selection-end-column="30" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/resourcedAllocation/DateSerwer.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+            <state relative-caret-position="646">
+              <caret line="56" column="9" selection-start-line="56" selection-start-column="9" selection-end-line="56" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -51,22 +38,35 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/resourcedAllocation/Client.java">
+        <entry file="file://$PROJECT_DIR$/src/resourcedAllocation/NetworkNode.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="23" lean-forward="true" selection-start-line="6" selection-start-column="23" selection-end-line="6" selection-end-column="23" />
+            <state relative-caret-position="1207">
+              <caret line="71" column="30" selection-start-line="71" selection-start-column="30" selection-end-line="71" selection-end-column="30" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#462#479#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/kolokwium/asd.java">
+        <entry file="jar://C:/Program Files/Java/jdk1.8.0_212/src.zip!/java/util/HashMap.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="782">
-              <caret line="46" column="27" selection-start-line="46" selection-start-column="27" selection-end-line="46" selection-end-column="27" />
+            <state relative-caret-position="333">
+              <caret line="1082" column="13" selection-start-line="1082" selection-start-column="13" selection-end-line="1082" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/resourcedAllocation/TempCode.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1190">
+              <caret line="70" column="11" selection-start-line="70" selection-start-column="11" selection-end-line="70" selection-end-column="11" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -83,6 +83,8 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>987</find>
+      <find>args</find>
+      <find>localho</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -98,21 +100,17 @@
         <option value="$PROJECT_DIR$/src/youtube/Client.java" />
         <option value="$PROJECT_DIR$/src/youtube/DateSerwer.java" />
         <option value="$PROJECT_DIR$/src/resourcedAllocation/Client.java" />
+        <option value="$PROJECT_DIR$/src/resourcedAllocation/NetworkClient.java" />
+        <option value="$PROJECT_DIR$/src/resourcedAllocation/TempCode.java" />
+        <option value="$PROJECT_DIR$/src/resourcedAllocation/DateSerwer.java" />
+        <option value="$PROJECT_DIR$/src/resourcedAllocation/NetworkNode.java" />
       </list>
     </option>
   </component>
-  <component name="ProjectConfigurationFiles">
-    <option name="files">
-      <list>
-        <option value="$PROJECT_DIR$/.idea/vcs.xml" />
-      </list>
-    </option>
-  </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1056" />
-    <option name="y" value="232" />
-    <option name="width" value="1320" />
-    <option name="height" value="1087" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-7" />
+    <option name="width" value="1292" />
+    <option name="height" value="1447" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -136,12 +134,6 @@
               <item name="untitled" type="b2602c69:ProjectViewProjectNode" />
               <item name="untitled" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="kolokwium" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="untitled" type="b2602c69:ProjectViewProjectNode" />
-              <item name="untitled" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="resourcedAllocation" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -153,6 +145,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -173,9 +166,9 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Client">
-    <configuration name="Client" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="resourcedAllocation.Client" />
+  <component name="RunManager" selected="Application.NetworkNode">
+    <configuration name="NetworkClient" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="resourcedAllocation.NetworkClient" />
       <module name="untitled" />
       <extension name="coverage">
         <pattern>
@@ -187,8 +180,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DateSerwer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="resourcedAllocation.DateSerwer" />
+    <configuration name="NetworkNode" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="resourcedAllocation.NetworkNode" />
       <module name="untitled" />
       <extension name="coverage">
         <pattern>
@@ -228,8 +221,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Client" />
-        <item itemvalue="Application.DateSerwer" />
+        <item itemvalue="Application.NetworkNode" />
+        <item itemvalue="Application.NetworkClient" />
         <item itemvalue="Application.serwerUDP" />
         <item itemvalue="Application.asd" />
       </list>
@@ -250,31 +243,32 @@
       <workItem from="1641774327133" duration="595000" />
       <workItem from="1641811394064" duration="1601000" />
       <workItem from="1641835952875" duration="3896000" />
-      <workItem from="1641891176232" duration="576000" />
+      <workItem from="1641891176232" duration="13186000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15534000" />
+    <option name="totallyTimeSpent" value="28144000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1056" y="232" width="1320" height="1087" extended-state="0" />
+    <frame x="-7" y="0" width="1292" height="1447" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15079366" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15422077" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="UI Designer" order="3" />
       <window_info id="Favorites" order="4" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.19871107" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.19984508" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.76369494" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.20461538" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="11" />
       <window_info anchor="bottom" id="Messages" order="12" />
@@ -307,9 +301,16 @@
     <entry file="file://$PROJECT_DIR$/../../semestr 3/skj/dzienni/lab 3/rozwiązania zadań z javy/tcpsockets/src/main/java/tiia/pjatk/skj/CommandLineOptions.java">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/kolokwium/asd.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="782">
+          <caret line="46" column="27" selection-start-line="46" selection-start-column="27" selection-end-line="46" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/kolokwium/klientTCP.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
+        <state relative-caret-position="153">
           <caret line="12" column="28" selection-start-line="12" selection-start-column="28" selection-end-line="12" selection-end-column="28" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -319,7 +320,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/kolokwium/serwerUDP.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
+        <state relative-caret-position="646">
           <caret line="38" column="30" selection-start-line="38" selection-start-column="30" selection-end-line="38" selection-end-column="30" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -327,29 +328,40 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/kolokwium/asd.java">
+    <entry file="file://$PROJECT_DIR$/src/resourcedAllocation/TempCode.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="782">
-          <caret line="46" column="27" selection-start-line="46" selection-start-column="27" selection-end-line="46" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/resourcedAllocation/DateSerwer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        <state relative-caret-position="1190">
+          <caret line="70" column="11" selection-start-line="70" selection-start-column="11" selection-end-line="70" selection-end-column="11" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/resourcedAllocation/Client.java">
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_212/src.zip!/java/util/HashMap.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="23" lean-forward="true" selection-start-line="6" selection-start-column="23" selection-end-line="6" selection-end-column="23" />
+        <state relative-caret-position="333">
+          <caret line="1082" column="13" selection-start-line="1082" selection-start-column="13" selection-end-line="1082" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/resourcedAllocation/NetworkClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="646">
+          <caret line="56" column="9" selection-start-line="56" selection-start-column="9" selection-end-line="56" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/resourcedAllocation/NetworkNode.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1207">
+          <caret line="71" column="30" selection-start-line="71" selection-start-column="30" selection-end-line="71" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#462#479#0" expanded="true" />
           </folding>
         </state>
       </provider>
