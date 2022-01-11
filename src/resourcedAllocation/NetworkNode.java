@@ -8,32 +8,35 @@ import java.util.Iterator;
 import java.util.Map;
 
 public class NetworkNode {
-    public static void main(String[] args) throws IOException {
-        boolean isMaster = true;
-        String identifier = null;
-        int serverPort = 0;
-        String gatewayIP = null;
-        int gatewayPort = 0;
-        String tempResourceKey = null;
-        Integer tempRecourceValue = 0;
-        int oldValue = 0;
-        boolean isKeyPresent = false;
-        HashMap<String, NetworkNode> mapOfNodes = null;
-        HashMap<String, Integer> mapOfResources = new HashMap<String, Integer>();
-        Socket socket= null;
-        InputStreamReader inputStreamReader = null;
-        OutputStreamWriter outputStreamWriter = null;
-        BufferedReader bufferedReader = null;
-        BufferedWriter bufferedWriter = null;
-        ServerSocket serverSocket = null;
-        serverSocket =  new ServerSocket(serverPort);
+    boolean isMaster = true;
+    String identifier = null;
+    int serverPort = 0;
+    String gatewayIP = null;
+    int gatewayPort = 0;
+    String tempResourceKey = null;
+    Integer tempRecourceValue = 0;
+    int oldValue = 0;
+    boolean isKeyPresent = false;
+    HashMap<String, NetworkNode> mapOfNodes = null;
+    HashMap<String, Integer> mapOfResources = new HashMap<String, Integer>();
+    Socket socket= null;
+    InputStreamReader inputStreamReader = null;
+    OutputStreamWriter outputStreamWriter = null;
+    BufferedReader bufferedReader = null;
+    BufferedWriter bufferedWriter = null;
+    ServerSocket serverSocket = null;
 
+    public NetworkNode() {
+
+    }
+    public void checkIfMaster(String[] args) {
         for (int i=0; i <args.length; i++) {
             if(args[i] == "-gateway") {
                 isMaster = false;
             }
         }
-
+    }
+    public void readParametersFromArgsArray(String[] args) {
         if(!isMaster) {
             for(int i=0; i < args.length; i++) {
                 switch (args[i]) {
@@ -98,7 +101,32 @@ public class NetworkNode {
                 }
             }
         }
-        //czy te porty?
+    }
+
+    public void startServer(){
+        try {
+            while (!serverSocket.isClosed()) {
+                Socket socket = serverSocket.accept();
+                System.out.println("Conection incoming");
+                ClientAndServerHandler clientAndServerHandler = new ClientAndServerHandler(socket);
+                Thread thread = new Thread(clientAndServerHandler);
+                thread.start();
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+
+
+    public static void main(String[] args) throws IOException {
+
+        NetworkNode networkNode = new NetworkNode();
+        networkNode.checkIfMaster(args);
+        networkNode.readParametersFromArgsArray(args);
+
+
+/*        //czy te porty?
         socket = new Socket(gatewayIP, gatewayPort);
         outputStreamWriter = new OutputStreamWriter(socket.getOutputStream());
         bufferedWriter = new BufferedWriter(outputStreamWriter);
@@ -122,7 +150,6 @@ public class NetworkNode {
                 bufferedReader = new BufferedReader(inputStreamReader);
                 bufferedWriter = new BufferedWriter(outputStreamWriter);
 
-
                 socket.close();
                 inputStreamReader.close();
                 outputStreamWriter.close();
@@ -131,9 +158,11 @@ public class NetworkNode {
             }
         } catch (IOException e) {
             e.printStackTrace();
-        }
+        }*/
 
 
     }
+
+
 
 }
