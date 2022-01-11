@@ -98,7 +98,7 @@ public class NetworkNode {
                 }
             }
         }
-        //SPRWADZIC
+        //czy te porty?
         socket = new Socket(gatewayIP, gatewayPort);
         outputStreamWriter = new OutputStreamWriter(socket.getOutputStream());
         bufferedWriter = new BufferedWriter(outputStreamWriter);
@@ -112,7 +112,7 @@ public class NetworkNode {
             bufferedWriter.newLine();
             bufferedWriter.flush();
         }
-        //SPRWADZIC
+
         serverSocket = new ServerSocket();
         try {
             while (true) {
