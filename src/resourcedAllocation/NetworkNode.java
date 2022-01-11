@@ -16,10 +16,17 @@ public class NetworkNode {
         int gatewayPort = 0;
         String tempResourceKey = null;
         Integer tempRecourceValue = 0;
-        String comparisonKey = null;
         int oldValue = 0;
         boolean isKeyPresent = false;
+        HashMap<String, NetworkNode> mapOfNodes = null;
         HashMap<String, Integer> mapOfResources = new HashMap<String, Integer>();
+        Socket socket= null;
+        InputStreamReader inputStreamReader = null;
+        OutputStreamWriter outputStreamWriter = null;
+        BufferedReader bufferedReader = null;
+        BufferedWriter bufferedWriter = null;
+        ServerSocket serverSocket = null;
+        serverSocket =  new ServerSocket(serverPort);
 
         for (int i=0; i <args.length; i++) {
             if(args[i] == "-gateway") {
@@ -28,7 +35,7 @@ public class NetworkNode {
         }
 
         if(!isMaster) {
-            for(int i=0; i <  args.length; i++) {
+            for(int i=0; i < args.length; i++) {
                 switch (args[i]) {
                     case "-ident":
                         identifier = args[++i];
@@ -49,7 +56,7 @@ public class NetworkNode {
                         isKeyPresent = false;
                         while (iterator.hasNext()) {
                             Map.Entry<String, Integer> entry = iterator.next();
-                            if (comparisonKey == entry.getKey()) {
+                            if (tempResourceKey == entry.getKey()) {
                                 isKeyPresent = true;
                                 oldValue = entry.getValue();
                             }
@@ -78,7 +85,7 @@ public class NetworkNode {
                         isKeyPresent = false;
                         while (iterator.hasNext()) {
                             Map.Entry<String, Integer> entry = iterator.next();
-                            if (comparisonKey == entry.getKey()) {
+                            if (tempResourceKey == entry.getKey()) {
                                 isKeyPresent = true;
                                 oldValue = entry.getValue();
                             }
@@ -91,17 +98,23 @@ public class NetworkNode {
                 }
             }
         }
-
-
-       /* try {
-            Socket socket= null;
-            InputStreamReader inputStreamReader = null;
-            OutputStreamWriter outputStreamWriter = null;
-            BufferedReader bufferedReader = null;
-            BufferedWriter bufferedWriter = null;
-            ServerSocket serverSocket = null;
-            serverSocket =  new ServerSocket(1234);
-
+        //SPRWADZIC
+        socket = new Socket(gatewayIP, gatewayPort);
+        outputStreamWriter = new OutputStreamWriter(socket.getOutputStream());
+        bufferedWriter = new BufferedWriter(outputStreamWriter);
+        if (isMaster) {
+            mapOfNodes = new HashMap<String, NetworkNode>();
+            mapOfNodes.put(identifier, null);
+        } else {
+            //Przekazac nie stringa tylko w zasadzie caly obiekt czyli jeden OutputStream, a nie writer?
+            String msgTosendToTheGateway = null;
+            bufferedWriter.write(msgTosendToTheGateway);
+            bufferedWriter.newLine();
+            bufferedWriter.flush();
+        }
+        //SPRWADZIC
+        serverSocket = new ServerSocket();
+        try {
             while (true) {
                 socket = serverSocket.accept();
                 inputStreamReader = new InputStreamReader(socket.getInputStream());
@@ -109,16 +122,7 @@ public class NetworkNode {
                 bufferedReader = new BufferedReader(inputStreamReader);
                 bufferedWriter = new BufferedWriter(outputStreamWriter);
 
-                while(true) {
-                    String msgFromClient = bufferedReader.readLine();
-                    System.out.println("Client " + msgFromClient);
-                    bufferedWriter.write("MSG received");
-                    bufferedWriter.newLine();
-                    bufferedWriter.flush();
-                    if(msgFromClient.equalsIgnoreCase("BYE"));
-                    break;
 
-                }
                 socket.close();
                 inputStreamReader.close();
                 outputStreamWriter.close();
@@ -127,11 +131,9 @@ public class NetworkNode {
             }
         } catch (IOException e) {
             e.printStackTrace();
-        }*/
-
-
-
+        }
 
 
     }
+
 }

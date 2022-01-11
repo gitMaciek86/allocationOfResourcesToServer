@@ -1,6 +1,6 @@
 package resourcedAllocation;
 
-import java.io.IOException;
+import java.io.*;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
@@ -69,6 +69,43 @@ public class TempCode {
         for(Map.Entry<String, Integer> entry : mapOfResources.entrySet()) {
             System.out.println("Resource: " + entry.getKey() + " , quantity: " + entry.getValue());
          */
+
+
+
+
+
+
+
+
+
+//----------------------
+/*        try {
+            while (true) {
+                socket = serverSocket.accept();
+                inputStreamReader = new InputStreamReader(socket.getInputStream());
+                outputStreamWriter = new OutputStreamWriter(socket.getOutputStream());
+                bufferedReader = new BufferedReader(inputStreamReader);
+                bufferedWriter = new BufferedWriter(outputStreamWriter);
+
+                while(true) {
+                    String msgFromClient = bufferedReader.readLine();
+                    System.out.println("Client " + msgFromClient);
+                    bufferedWriter.write("MSG received");
+                    bufferedWriter.newLine();
+                    bufferedWriter.flush();
+                    if(msgFromClient.equalsIgnoreCase("BYE"));
+                    break;
+
+                }
+                socket.close();
+                inputStreamReader.close();
+                outputStreamWriter.close();
+                bufferedReader.close();
+                bufferedWriter.close();
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }*/
         }
 
 }
